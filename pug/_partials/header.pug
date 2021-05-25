@@ -1,0 +1,14 @@
+mixin link(name, target)
+	a.font-title.text-center(href=target class='hover:text-gray-900')= name
+
+mixin current_link(name, target)
+	a.font-title.text-center(href=target class='hover:text-gray-900')= name
+
+header.text-gray-600.body-font
+	.container.mx-auto.flex.flex-wrap.p-5.flex-col.items-center(class='md:flex-row')
+		block links
+		//- button.inline-flex.items-center.bg-gray-100.border-0.py-1.px-3.rounded.text-base.mt-4(class='focus:outline-none hover:bg-gray-200 md:mt-0')
+		//-   | Talk to me!
+		//-   svg.w-4.h-4.ml-1(fill='none' stroke='currentColor' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' viewbox='0 0 24 24')
+		//-     path(d='M5 12h14M12 5l7 7-7 7')
+

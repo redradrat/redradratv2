@@ -1,0 +1,36 @@
+extends _partials/main.pug
+
+block links
+	nav.grid.grid-cols-3.items-center.text-base.justify-center(class='md:ml-auto md:mr-auto md:gap-4')
+		+current_link("home", "index.html")
+		+link("about me", "me.html")
+		+link("photography", "photo.html")
+
+block page
+	// Main Col
+	#content.w-full.relative.mx-6.mb-10(class='lg:mx-0 lg:mt-14')
+		.rounded-lg.shadow-2xl.bg-white(class='lg:w-4/5 lg:mx-0')
+			div(class='lg:w-4/5 lg:mx-0')
+				.p-4.text-center(class='md:p-12 lg:text-left')
+					// Image for mobile view
+					.block.rounded-full.shadow-xl.mx-auto.-mt-16.h-48.w-48.bg-cover.bg-center(class='lg:hidden' style="background-image: url('./assets/profile.jpg')")
+					h1.text-4xl.font-title.font-bold.pt-8.text-center(class='lg:pt-0') Ralph Kühnert
+					//- .mx-auto.pt-3.border-b-2.border-green-500.opacity-25(class='lg:mx-0 w-4/5')
+					p.pt-2.text-base.font-bold.text-center(class='lg:justify-start') DevOps Dude, Cloud Architect and Weathermaker
+					p.text-gray-600.text-xs.text-center(class='lg:text-sm lg:justify-start')
+						| Vienna, Austria
+					p.pt-8.text-sm
+						| Hey there! I’m a Software Developer from Vienna, focussing on Cloud Native design and DevOps Ideas. I design and build elastic, scalable cloud infrastructure to serve highly-available applications on a global scale, using modern, cloud-native and predominantly open-source tech.
+					.pt-8.pb-8.flex.items-center.justify-center
+						a(href='me.html')
+							button.bg-red-300.text-white.font-bold.py-2.px-4.rounded-full(class='hover:bg-red-400')
+								| Get to know me!
+					//- .mt-6.pb-16.mx-auto.flex.flex-wrap.items-center.justify-between(class='lg:pb-0 w-4/5 lg:w-full')
+					//- 	a.link(href='#' data-tippy-content='@facebook_handle')
+					//- 		svg.h-6.fill-current.text-gray-600(class='hover:text-green-700' role='img' viewbox='0 0 24 24' xmlns='http://www.w3.org/2000/svg')
+					//- 			title Facebook
+					//- 			path(d='M22.676 0H1.324C.593 0 0 .593 0 1.324v21.352C0 23.408.593 24 1.324 24h11.494v-9.294H9.689v-3.621h3.129V8.41c0-3.099 1.894-4.785 4.659-4.785 1.325 0 2.464.097 2.796.141v3.24h-1.921c-1.5 0-1.792.721-1.792 1.771v2.311h3.584l-.465 3.63H16.56V24h6.115c.733 0 1.325-.592 1.325-1.324V1.324C24 .593 23.408 0 22.676 0')
+			// Img Col
+		.absolute.transform.right-0.bottom-6.rotate-3(class='lg:w-80')
+			// Big profile image for side bar (desktop)
+			img.rounded-none.shadow-2xl.hidden(src='./assets/profile.jpg' class='lg:rounded-lg lg:block')

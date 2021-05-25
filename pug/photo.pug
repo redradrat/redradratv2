@@ -1,0 +1,20 @@
+extends _partials/main.pug
+
+block links
+	nav.grid.grid-cols-3.items-center.text-base.justify-center(class='md:ml-auto md:mr-auto md:gap-4')
+		+current_link("home", "index.html")
+		+link("about me", "me.html")
+		+link("photography", "photo.html")
+
+block page
+	// Main Col
+	#content.w-full.relative.mx-6.mb-10(class='lg:mx-0 lg:mt-8')
+		.rounded-lg.shadow-2xl.bg-white(class='lg:w-full lg:mx-0')
+			div(class='lg:w-full lg:mx-0')
+				.p-4.text-center(class='md:p-12 lg:text-left')
+					// Image for mobile view
+					h1.text-4xl.font-title.font-bold.pt-8.text-center(class='lg:pt-0') Gallery is under construction! 🚧
+					.pt-8.pb-8.flex.items-center.justify-center
+						a(href='index.html')
+							button.bg-red-300.text-white.font-bold.py-2.px-4.rounded-full(class='hover:bg-red-400')
+								| Return home

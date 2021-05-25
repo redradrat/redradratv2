@@ -1,0 +1,161 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+
+		#content a {
+			@apply text-red-200;
+		}
+
+		#content h1, h2, h3, h4 {
+			@apply font-semibold;
+		}
+
+		#content h1 {
+			@apply text-4xl;
+		}
+
+		#content h1:first-child {
+			margin-top: 0 !important;
+		}
+
+		#content h2 {
+			@apply text-2xl;
+		}
+
+		#content h2:first-child {
+			margin-top: 0 !important;
+		}
+
+		#content h3 {
+			@apply text-xl;
+		}
+
+		#content h3:first-child {
+			margin-top: 0 !important;
+		}
+
+		#content h4 {
+			@apply text-lg;
+		}
+
+		#content h4:first-child {
+			margin-top: 0 !important;
+		}
+
+		#content ol {
+			@apply list-decimal;
+		}
+
+		#content ul {
+			@apply list-disc;
+		}
+
+		#content ol, ul {
+			@apply list-inside;
+			@apply ml-4;
+			@apply text-gray-800;
+		}
+
+		#content code {
+			@apply text-sm;
+			@apply font-mono;
+		}
+
+		#content p {
+			@apply mt-2;
+			@apply text-gray-800;
+			@apply text-sm;
+			@apply mb-2;
+		}
+
+		#content pre {
+			@apply bg-gray-300;
+			@apply dark:bg-gray-800;
+			@apply m-2;
+			@apply whitespace-pre-line;
+			@apply p-2;
+		}
+
+}
+
+
+.hljs {
+  display: block;
+  overflow-x: auto;
+  padding: 0.5em;
+  @apply text-hljs;
+  @apply dark:text-hljs-dark;
+}
+
+.hljs-comment {
+  @apply text-hljs-comment;
+  @apply dark:text-hljs-comment-dark;
+}
+
+.hljs-keyword,
+.hljs-selector-tag,
+.hljs-meta-keyword,
+.hljs-doctag,
+.hljs-section,
+.hljs-selector-class,
+.hljs-meta,
+.hljs-selector-pseudo,
+.hljs-attr {
+  @apply text-hljs-attr;
+  @apply dark:text-hljs-attr-dark;
+}
+
+.hljs-attribute {
+  @apply text-hljs-attribute;
+  @apply dark:text-hljs-attribute-dark;
+}
+
+.hljs-name,
+.hljs-type,
+.hljs-number,
+.hljs-selector-id,
+.hljs-quote,
+.hljs-template-tag,
+.hljs-built_in,
+.hljs-title,
+.hljs-literal {
+  color: #b75501;
+}
+
+.hljs-string,
+.hljs-regexp,
+.hljs-symbol,
+.hljs-variable,
+.hljs-template-variable,
+.hljs-link,
+.hljs-selector-attr,
+.hljs-meta-string {
+  @apply text-hljs-meta-string;
+  @apply dark:text-hljs-meta-string-dark;
+}
+
+.hljs-bullet,
+.hljs-code {
+  @apply text-hljs-code;
+  @apply dark:text-hljs-code-dark;
+}
+
+.hljs-deletion {
+  @apply text-hljs-deletion;
+  @apply dark:text-hljs-deletion-dark;
+}
+
+.hljs-addition {
+  @apply text-hljs-addition;
+  @apply dark:text-hljs-addition-dark;
+}
+
+.hljs-emphasis {
+  font-style: italic;
+}
+
+.hljs-strong {
+  font-weight: bold;
+}
