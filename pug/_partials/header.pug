@@ -2,7 +2,7 @@ mixin link(name, target)
 	a.font-title.text-center(href=target class='hover:text-gray-900')= name
 
 mixin current_link(name, target)
-	a.font-title.text-center(href=target class='hover:text-gray-900')= name
+	a.font-title.text-center.underline(href=target class='hover:text-gray-900')= name
 
 header.text-gray-600.body-font
 	.container.mx-auto.flex.flex-wrap.p-5.flex-col.items-center(class='md:flex-row')
