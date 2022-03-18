@@ -1,10 +1,8 @@
-render: light-render
-	npx tailwindcss -i styles/main.css -o docs/css/main.css
-
-light-render:
+render:
+	rm -r docs/ && mkdir -p docs/assets
 	pug pug/{index,about,photo}.pug --out docs/
-	rm -r docs/assets && mkdir -p docs/assets
 	cp -r assets/* docs/assets/.
+	npx tailwindcss -i styles/main.css -o docs/css/main.css
 
 watch:
 	rm -rf build && mkdir build && \
