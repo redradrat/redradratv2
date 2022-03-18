@@ -9,28 +9,30 @@ block links
 block page
 	// Main Col
 	#content.w-full.relative
-		div.mb-4(class='lg:w-full lg:mx-0 sm:mb-8')
-			.container.px-4.py-8.mx-auto
-				.rounded-lg.overflow.mt-6.items-center.justify-center.flex
-					img.object-cover.object-center(src='assets/me.jpg' class='h-2/5 max-h-60' alt='me')
-			.container.w-full.mx-auto
-				.px-4.text-sm.text-gray-800.leading-normal(class='md:px-8')
+		div.mx-8.max-w-4xl(class='lg:mx-32 sm:mb-8 md:px-8')
+			.flex.flex-col.mb-8.mx-auto(class="sm:flex-row")
+				.text-rad-black.leading-normal(class='sm:pr-8')
 					p.pt-2
 						| I&rsquo;m striving to design generic infrastructure and application platforms, maintained and operated through normalized interfaces. I believe that all componentry should be accessible and exposable via unified and homogenous APIs, enabling globally-distributed teams with different technical backgrounds to interconnect flawlessly through normalized abstraction.
 					p.pt-2.mb-8
-						strong Take a look at my:
+						span.font-semibold Take a look at my:
 						span.block
-							a.text-red-200(href='#technical-expertise')
-								strong  Technical Expertise
+							a(href='#technical-expertise')
+								span.font-normal  Technical Expertise
 							strong  |
-							a.text-red-200(href='#career')
-								strong  Career
-					section#technical-expertise.text-gray-600.pt-10.body-font.overflow-hidden
+							a(href='#career')
+								span.font-normal  Career
+				.grow.rounded-lg.overflow.items-center.flex.flex-col.justify-center.mt-4.max-h-full(class="sm:mt-0")
+					img.object-cover.object-center(src='assets/profile.jpg' class='' alt='me')
+					span.text-grey-800.italic(class="text-[10px]") Me; Feldkirch, Vorarlberg
+			.flex.flex-col.w-full.mx-auto
+				.text-rad-black.leading-normal()
+					section#technical-expertise.pt-10.body-font.overflow-hidden
 						h3 Technical Expertise
 						p.pt-2
 							| I believe right now a couple of technologies and paradigms converge to enable building platforms that at least approximate such a vision. Kubernetes uniquely ties them together, to offer a unified API and accompanying reconciliation logic to provide services that especially suit the infrastructure automation disciplines.
 						p.pt-2
-							ul
+							ul.text-sm(class="sm:text-base")
 								li
 									| Kubernetes
 									ul
@@ -62,18 +64,33 @@ block page
 									ul
 										li AWS
 										li DigitalOcean
-					section#career.text-gray-600.pt-10.body-font.overflow-hidden
+					section#career.pt-10.body-font.overflow-hidden
 						h3 Career
 						.container.px-5.py-5.mx-auto
 							.-my-8.divide-y-2.divide-gray-100
 								.py-8.flex.flex-wrap(class='md:flex-nowrap')
 									.mb-6.flex-shrink-0.flex.flex-col(class='md:w-40 md:mb-0')
-										span.text-md.font-semibold.title-font.text-gray-700 Hilti AG,
-										span.text-md.font-semibold.title-font.text-gray-700 Liechtenstein
-										span.text-sm.text-gray-500 since May 2019
+										span.text-md.font-semibold.title-font SQUER Solutions,
+										span.text-md.font-semibold.title-font Austria
+										span.text-sm.text-rad-red since Sep 2021
 									div(class='md:flex-grow')
-										h2.text-lg.font-medium.text-gray-900.title-font.mb-2 Cloud Architect / Engineering Lead
-										blockquote.text-sm.border-l-4.border-red-200.italic.my-4.pl-4
+										h2.text-lg.font-medium.text-rad-black.title-font.mb-2 Head of Cloud Infrastructure
+										blockquote.border-l-4.border-rad-red.italic.my-4.pl-4
+											| I joined SQUER, leading the Cloud Native Infrastructure Engineering efforts as well as promoting of wholistic DevOps practices the project ecosystem.
+											br
+											| With the move back to the consulting world, I'm able to use my collective experience in designing and implementing cloud platforms in various customer scenarios and landscapes. SQUER Solutions, with the expert focus on reactive and scalable architectures is an excellent service provider for all questions regarding cloud native development.
+										ul
+											li Cloud-native Infrastructure Expertise
+											li Technical/Engineering Leadership
+											li Consulting Services and Customer Success
+								.py-8.flex.flex-wrap(class='md:flex-nowrap')
+									.mb-6.flex-shrink-0.flex.flex-col(class='md:w-40 md:mb-0')
+										span.text-md.font-semibold.title-font Hilti AG,
+										span.text-md.font-semibold.title-font Liechtenstein
+										span.text-sm.text-rad-red May 2019 - Aug 2021
+									div(class='md:flex-grow')
+										h2.text-lg.font-medium.text-rad-black.title-font.mb-2 Cloud Architect / Engineering Lead
+										blockquote.border-l-4.border-rad-red.italic.my-4.pl-4
 											| At Hilti the opportunity arose, to design and lead development of a new cloud-native and multi-purpose infrastructure platform to serve as a foundation for various projects around the globe. I took the opportunity, moving from the start-up sphere into the corporate world, with Hilti not only just being a technical innovator, but also a global front-runner in its various business areas.
 										ul
 											li Cloud-native Infrastructure Design
@@ -81,12 +98,12 @@ block page
 											li Kubernetes-centric Architecture & Development
 								.py-8.flex.flex-wrap(class='md:flex-nowrap')
 									.mb-6.flex-shrink-0.flex.flex-col(class='md:w-40 md:mb-0')
-										span.text-md.font-semibold.title-font.text-gray-700 Loodse GmbH,
-										span.text-md.font-semibold.title-font.text-gray-700 Germany
-										span.text-sm.text-gray-500 Nov 2018 - April 2019
+										span.text-md.font-semibold.title-font Loodse,
+										span.text-md.font-semibold.title-font Germany
+										span.text-sm.text-rad-red Nov 2018 - Apr 2019
 									div(class='md:flex-grow')
-										h2.text-lg.font-medium.text-gray-900.title-font.mb-2 Developer / Consultant
-										blockquote.text-sm.border-l-4.border-red-200.italic.my-4.pl-4
+										h2.text-lg.font-medium.text-rad-black.title-font.mb-2 Developer / Consultant
+										blockquote.border-l-4.border-rad-red.italic.my-4.pl-4
 											| I moved to Loodse in order to focus more on kubernetes, and to gain more insight into the forefront of modern cloud-native infrastructure design and engineering. Loodse, with their own range of kubernetes-focused tech, is not only one an active player in the global kubernetes ecosystem, but also an innovation driver. Working here, I learned a lot about what it means to work on the frontier of modern design and how to learn and adapt quickly, but also how to facilitate implementation and design for environments traditionally not used to fast-paced iteration.
 										ul
 											li Kubernetes Expertise
@@ -94,12 +111,12 @@ block page
 											li DevOps - Consulting and Training
 								.py-8.flex.flex-wrap(class='md:flex-nowrap')
 									.mb-6.flex-shrink-0.flex.flex-col(class='md:w-40 md:mb-0')
-										span.text-md.font-semibold.title-font.text-gray-700 Braintribe GmbH,
-										span.text-md.font-semibold.title-font.text-gray-700 Austria
-										span.text-sm.text-gray-500 Sep 2013 - Oct 2018
+										span.text-md.font-semibold.title-font Braintribe,
+										span.text-md.font-semibold.title-font Austria
+										span.text-sm.text-rad-red Sep 2013 - Oct 2018
 									div(class='md:flex-grow')
-										h2.text-lg.font-medium.text-gray-900.title-font.mb-2 Software Developer
-										blockquote.text-sm.border-l-4.border-red-200.italic.my-4.pl-4
+										h2.text-lg.font-medium.text-rad-black.title-font.mb-2 Software Developer
+										blockquote.border-l-4.border-rad-red.italic.my-4.pl-4
 											| Braintribe is a Vienna, Austria-based start-up, with a tech-heavy focus, developing a generic computing and data normalization platform, and various solutions on top of it. I spent some wonderfully rich and insightful years here, acquiring and honing skills and a well-rounded view on software architecture and abstraction design. Initially starting to work on test automation, my role quickly shifted towards engineering infrastructure automation solutions for the platform and implementing DevOps componentry for the development, test and deployment workflows. The move to the Cloud for the platform, as a scalable service to build solutions of any size and networking requirements, required me to build up a deep understanding of modern infrastructure architecture and operations and a strong skillset to develop such. Working in a start-up really is the greatest learning experience, from business to tech skills. Nothing is more unforgiving than the deep end…
 										ul
 											li Build, Design and Implement Product-based Cloud Services (Paas)
@@ -107,12 +124,12 @@ block page
 											li Development (Monolith to Microservices, Serverless)
 								.py-8.flex.flex-wrap(class='md:flex-nowrap')
 									.mb-6.flex-shrink-0.flex.flex-col(class='md:w-40 md:mb-0')
-										span.text-md.font-semibold.title-font.text-gray-700 Tricentis GmbH,
-										span.text-md.font-semibold.title-font.text-gray-700 Austria
-										span.text-sm.text-gray-500 Feb 2013 - Aug 2013
+										span.text-md.font-semibold.title-font Tricentis,
+										span.text-md.font-semibold.title-font Austria
+										span.text-sm.text-rad-red Feb 2013 - Aug 2013
 									div(class='md:flex-grow')
-										h2.text-lg.font-medium.text-gray-900.title-font.mb-2 Technical Test Consultant
-										blockquote.text-sm.border-l-4.border-red-200.italic.my-4.pl-4
+										h2.text-lg.font-medium.text-rad-black.title-font.mb-2 Technical Test Consultant
+										blockquote.border-l-4.border-rad-red.italic.my-4.pl-4
 											| Working as a Technical Test Consultant with different clients in Switzerland and Austria, I had a chance to understand the fundamentals of Test Automation in high-risk business areas (banking) and an understanding of the infrastructural and operational dependencies for efficient test automation. Tricentis was a great employer, that grew a lot since then - awesome to see!
 										ul
 											li Test Automation

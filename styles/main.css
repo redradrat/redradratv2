@@ -5,11 +5,12 @@
 @layer base {
 
 		#content a {
-			@apply text-red-200;
+			@apply text-rad-red;
 		}
 
 		#content h1, h2, h3, h4 {
 			@apply font-semibold;
+			@apply text-rad-green;
 		}
 
 		#content h1 {
@@ -55,7 +56,6 @@
 		#content ol, ul {
 			@apply list-inside;
 			@apply ml-4;
-			@apply text-gray-800;
 		}
 
 		#content code {
@@ -65,17 +65,17 @@
 
 		#content p {
 			@apply mt-2;
-			@apply text-gray-800;
-			@apply text-sm;
+			@apply text-base;
 			@apply mb-2;
 		}
 
 		#content pre {
-			@apply bg-gray-300;
-			@apply dark:bg-gray-800;
 			@apply m-2;
 			@apply whitespace-pre-line;
 			@apply p-2;
+		}
+
+		#content blockquote {
 		}
 
 }

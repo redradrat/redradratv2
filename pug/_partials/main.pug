@@ -17,18 +17,21 @@ html.bg-rad-bg(lang="en-us")
 		link(rel="preconnect" href="https://fonts.gstatic.com")
 		link(href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Vollkorn:wght@700&display=swap" rel="stylesheet")
 		link(rel='icon' type='image/png' href='assets/favicon_32.png')
-	body.font-body.font-light.mb-0.h-screen
+	body.font-title.mb-0.h-screen
+		div.invisible.absolute.top-8.right-10.h-fit.w-fit.rounded-full(class="sm:visible")
+			a(href="https://github.com/redradrat" target="_blank")
+				img.max-h-36.rotate-3.drop-shadow-md(src="./assets/redradrat-round.png" class="md:max-h-40 lg:max-h-52")
 		div.relative.text-base
 			.flex.flex-col.h-full
 				.mb-8.mt-8
-					header.text-rad-black.body-font
+					header.text-rad-black.font-light
 						.flex.whitespace-nowrap.px-5.flex-row.justify-center
 							block links
 				mt-8.text-8xl.font-title.text-rad-green.font-semibold.text-center.pt-4(class="lg:text-9xl")
 					p.pb-4 Ralph
 					p Kühnert
 				.grow.flex.flex-col.mt-8
-					.mx-auto.mb-16.grow
+					.mx-auto.mb-16.grow.font-body.font-light
 						block page
 					footer.mx-auto.mb-8
 						.flex.flex-wrap.justify-center.whitespace-pre-wrap

@@ -13,7 +13,7 @@ module.exports = {
 				},
 			},
 			fontFamily: {
-				body: "ivypresto-display, serif",
+				body: "ivypresto-text, serif",
 				sans: "Open Sans, Helvetica, Arial, sans-serif",
 				title: "ivypresto-display, serif",
 			},
