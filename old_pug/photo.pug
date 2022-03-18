@@ -2,9 +2,9 @@ extends _partials/main.pug
 
 block links
 	nav.grid.grid-cols-3.items-center.text-base.justify-center(class='md:ml-auto md:mr-auto md:gap-4')
-		+link("home", "./index.html")
-		+link("about me", "./about.html")
-		+current_link("photo", "./photo.html")
+		+link("home", "/")
+		+link("about me", "/about")
+		+current_link("photo", "/photo")
 
 block page
 	// Main Col
@@ -15,6 +15,6 @@ block page
 					// Image for mobile view
 					h1.text-4xl.font-title.font-bold.pt-8.text-center(class='lg:pt-0') Gallery is under construction! 🚧
 					.pt-8.pb-8.flex.items-center.justify-center
-						a(href='./index.html')
+						a(href='/')
 							button.bg-red-300.text-white.font-bold.py-2.px-4.rounded-full(class='hover:bg-red-400')
 								| Return home

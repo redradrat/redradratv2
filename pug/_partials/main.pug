@@ -1,3 +1,10 @@
+mixin link(name, target)
+	a.font-title.text-center(href=target class='hover:text-gray-900')= name
+
+mixin current_link(name, target)
+	a.font-title.text-center.underline(href=target class='hover:text-gray-900')= name
+
+
 html(lang="en-us")
 	head
 		meta(charset="utf-8")
@@ -5,20 +12,25 @@ html(lang="en-us")
 		title at redradrat's
 		meta(name="viewport", content="width=device-width, initial-scale=1, user-scalable=0, maximum-scale=1.0")
 		meta(name="description", content="Hi my name is Ralph Kühnert, and I'm a Software Engineer based in Austria. This is my personal page.")
+		link(rel="stylesheet" href="https://use.typekit.net/gnm6dpz.css")
 		link(rel="stylesheet", type="text/css", href="./css/main.css")
 		link(rel="preconnect" href="https://fonts.gstatic.com")
 		link(href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Vollkorn:wght@700&display=swap" rel="stylesheet")
 		link(rel='icon' type='image/png' href='assets/favicon_32.png')
-	body.bg-rad-bg
-		script(src='https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js' defer='')
-		script(src='https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.6.0/build/highlight.min.js')
-		script(src='https://cdn.skypack.dev/@hotwired/turbo')
-		script.
-			hljs.highlightAll();
+	body.bg-rad-bg.font-body.font-light.mb-0.h-screen
 		div.relative
-			.flex.h-screen.font-sans
-				.flex-1.flex.flex-col
-					include header.pug
-					.max-w-4xl.flex.items-center.h-auto.flex-wrap.mx-auto.mt-8.px-4(class='lg:h-auto sm:px-8 md:mt-4')
-						block page
-					include footer.pug
+			.flex
+				.flex-col.mx-auto.mt-8
+					.flex-1.mb-8
+						header.text-rad-black.body-font
+							.flex.w-full.whitespace-nowrap.px-5.flex-col(class='md:flex-row')
+								block links
+					.flex-1.text-8xl.font-title.text-rad-green.font-bold.text-center.mb-4.pt-4
+						p.pb-4 Ralph
+						p Kühnert
+			.flex.items-center.w-full.flex-wrap.mb-16(class='lg:h-auto sm:px-8')
+				block page
+			include footer.pug
+		script(defer src='https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js')
+		script(src='https://cdn.skypack.dev/pin/@hotwired/turbo@v7.1.0-V83RMQBlYCPK9CvTqQoL/mode=imports/optimized/@hotwired/turbo.js')
+

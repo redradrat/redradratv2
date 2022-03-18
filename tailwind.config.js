@@ -1,45 +1,44 @@
 module.exports = {
-	purge: [],
-	darkMode: 'class', // or 'media' or 'class'
+	content: ["./build/*.{html,js}", "./docs/*.{html,js}"],
+	darkMode: "class", // or 'media' or 'class'
 	theme: {
 		extend: {
-			fontFamily: {
-				'sans': 'Open Sans, Helvetica, Arial, sans-serif',
-				'title': 'Vollkorn, Open Sans, Helvetica, Arial, sans-serif',
-			},
 			colors: {
-				"rad-bg": '#fef0df',
-				"hljs": '#2f3337',
-				"hljs-dark": '#ffffff',
-				"hljs-comment": '#656e77',
-				"hljs-comment-dark": '#999999',
-				"hljs-comment": '#656e77',
-				"hljs-comment-dark": '#999999',
-				"hljs-attr": '#015692',
-				"hljs-attr-dark": '#88aece',
-				"hljs-attribute": '#803378',
-				"hljs-attribute-dark": '#c59bc1',
-				"hljs-literal": '#b75501',
-				"hljs-literal-dark": '#f08d49',
-				"hljs-meta-string": '#54790d',
-				"hljs-meta-string-dark": '#b5bd68',
-				"hljs-code": '#535a60',
-				"hljs-code-dark": '#cccccc',
-				"hljs-deletion": '#c02d2e',
-				"hljs-deletion-dark": '#de7176',
-				"hljs-addition": '#2f6f44',
-				"hljs-addition-dark": '#76c490',
+				rad: {
+					bg: '#ffefdf',
+					blue: '#cce2de',
+					red: '#da5858',
+					green: '#40614e',
+					black: '#141204'
+				},
 			},
+			fontFamily: {
+				body: "ivypresto-display, serif",
+				sans: "Open Sans, Helvetica, Arial, sans-serif",
+				title: "ivypresto-display, serif",
+			},
+			fontSize: {
+				"xs": ["min(4vw, 0.75rem)", "1rem"],
+				"sm": ["min(5vw, 0.875rem)", "1.25rem"],
+				"base": ["min(6vw, 1rem)", "1.5rem"],
+				"lg": ["min(25vw, 1.125rem)", "1.75rem"],
+				"xl": ["min(25vw, 1.25rem)", "1.75rem"],
+				"2xl": ["min(25vw, 1.5rem)", "2rem"],
+				"3xl": ["min(25vw, 1.875rem)", "2.25rem"],
+				"4xl": ["min(25vw, 2.25rem)", "2.5rem"],
+				"5xl": ["min(25vw, 3rem)", "1"],
+				"6xl": ["min(25vw, 3.75rem)", "1"],
+				"7xl": ["min(25vw, 4.5rem)", "1"],
+				"8xl": ["min(25vw, 6rem)", "1"],
+				"9xl": ["min(25vw, 8rem)", "1"],
+			}
+		}
+	},
+	variants: {
+		extend: {
+			divideColor: ["responsive", "dark"],
+			padding: ["responsive", "dark"],
 		},
 	},
-		variants: {
-			extend: {
-			divideColor: ['responsive', 'dark'],
-			padding: ['responsive', 'dark']
-			}
-		},
-		plugins: [
-			require('tailwindcss'),
-			require('autoprefixer'),
-		],
-}
+	plugins: [require("daisyui")],
+};

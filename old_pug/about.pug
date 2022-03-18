@@ -2,14 +2,14 @@ extends _partials/main.pug
 
 block links
 	nav.grid.grid-cols-3.items-center.text-base.justify-center(class='md:ml-auto md:mr-auto md:gap-4')
-		+link("home", "./index.html")
-		+current_link("about me", "./about.html")
-		+link("photo", "./photo.html")
+		+link("home", "/")
+		+current_link("about me", "/about")
+		+link("photo", "/photo")
 
 block page
 	// Main Col
 	#content.w-full.relative
-		div.mb-4(class='lg:w-full lg:mx-0 sm:mb-8')
+		.rounded-lg.shadow-2xl.bg-white.mb-4(class='lg:w-full lg:mx-0 sm:mb-8')
 			.container.px-4.py-8.mx-auto
 				.rounded-lg.overflow.mt-6.items-center.justify-center.flex
 					img.object-cover.object-center(src='assets/me.jpg' class='h-2/5 max-h-60' alt='me')
